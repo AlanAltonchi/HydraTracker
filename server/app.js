@@ -1,13 +1,14 @@
+const { db_host, db_user, db_pwd, db_name } = require('./config');
 const express = require('express');
 const mysql = require('mysql');
 const cors = require('cors');
 
 
 const pool = mysql.createPool({
-    host: '192.168.0.29',
-    user: 'admin_water_tracker',
-    password: 'pw9vSE4MjWn3ifS4',
-    database: 'water_tracker'
+    host: db_host,
+    user: db_user,
+    password: db_pwd,
+    database: db_name
   });
   
 const app = express();
